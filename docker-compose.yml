@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  open-webui:
+    image: ghcr.io/open-webui/open-webui@sha256:fff3d8017355097556d7600aa84b46e28b221201ecda9f9191d2249a05b88fc3
+    ports:
+      - "3000:8080"
+    environment:
+      - OLLAMA_BASE_URL=http://host.docker.internal:8080/ollama
+    restart: always
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
