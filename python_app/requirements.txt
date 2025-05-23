@@ -1,0 +1,6 @@
+Flask
+SQLAlchemy
+langchain
+python-dotenv
+pytest
+pytest-mock
